@@ -31,7 +31,7 @@ export function BarChartCard({
   return (
     <div className="w-full bg-white rounded-lg shadow p-6">
       <h3 className="text-lg font-semibold mb-4">{title}</h3>
-      <ResponsiveContainer width={width} height={height}>
+      <ResponsiveContainer width={width as any} height={height}>
         <BarChart data={data}>
           <CartesianGrid strokeDasharray="3 3" />
           <XAxis dataKey={xAxisKey} />
