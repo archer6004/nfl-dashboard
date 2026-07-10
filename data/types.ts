@@ -1,3 +1,30 @@
+export type Stats = {
+  passRate?: number;
+  rushRate?: number;
+  yardsPerGame?: number;
+  pointsPerGame?: number;
+  turnovers?: number;
+  yardsAllowed?: number;
+  pointsAllowed?: number;
+  sacks?: number;
+};
+
+export type WeeklyTeamStats = {
+  week: number;
+  offense: {
+    passRate: number;
+    rushRate: number;
+    yardsPerGame: number;
+    pointsPerGame: number;
+    turnovers: number;
+  };
+  defense: {
+    yardsAllowed: number;
+    pointsAllowed: number;
+    sacks: number;
+  };
+};
+
 export type Team = {
   id: string; // 'KC', 'SF' 등
   name: string;
@@ -18,6 +45,12 @@ export type Team = {
     passPct: number;
     rushPct: number;
   }[];
+  weeklyStats?: WeeklyTeamStats[];
+};
+
+export type WeeklyPlayerStats = {
+  week: number;
+  stats: Record<string, number>;
 };
 
 export type Player = {
@@ -26,4 +59,5 @@ export type Player = {
   team: string;
   position: 'QB' | 'RB' | 'WR' | 'TE';
   stats: Record<string, number>;
+  weeklyStats?: WeeklyPlayerStats[];
 };

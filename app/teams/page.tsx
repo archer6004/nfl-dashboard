@@ -2,13 +2,15 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { getTeams } from '@/data';
+import { getTeams, getWeeklyTeamStats, getAvailableWeeks } from '@/data';
 import { RadarChartCard } from '@/components/charts/RadarChartCard';
 import { BarChartCard } from '@/components/charts/BarChartCard';
 
 export default function TeamsPage() {
   const allTeams = getTeams();
   const [selectedTeams, setSelectedTeams] = useState<string[]>(['KC', 'SF']);
+  const [selectedWeek, setSelectedWeek] = useState<number | null>(null);
+  const availableWeeks = getAvailableWeeks();
 
   const toggleTeam = (teamId: string) => {
     setSelectedTeams((prev) =>
@@ -20,15 +22,36 @@ export default function TeamsPage() {
 
   const selected = allTeams.filter((t) => selectedTeams.includes(t.id));
 
+  // Get team stats (weekly if available and selected, else season stats)
+  const getTeamStats = (team: typeof selected[0]) => {
+    if (selectedWeek !== null) {
+      const weeklyStats = getWeeklyTeamStats(team.id);
+      const weekData = weeklyStats.find((w) => w.week === selectedWeek);
+      if (weekData) {
+        return {
+          offense: weekData.offense,
+          defense: weekData.defense,
+        };
+      }
+    }
+    return {
+      offense: team.offense,
+      defense: team.defense,
+    };
+  };
+
   // Radar chart data for offense/defense
-  const radarData = selected.map((team) => ({
-    name: team.name,
-    'Pass Rate': team.offense.passRate,
-    'Rush Rate': team.offense.rushRate,
-    'Yards/Game': team.offense.yardsPerGame / 50,
-    'Points/Game': team.offense.pointsPerGame * 2,
-    'Turnovers': team.offense.turnovers,
-  }));
+  const radarData = selected.map((team) => {
+    const stats = getTeamStats(team);
+    return {
+      name: team.name,
+      'Pass Rate': stats.offense.passRate,
+      'Rush Rate': stats.offense.rushRate,
+      'Yards/Game': stats.offense.yardsPerGame / 50,
+      'Points/Game': stats.offense.pointsPerGame * 2,
+      'Turnovers': stats.offense.turnovers,
+    };
+  });
 
   // Bar chart data for down tendencies
   const downData = selected.flatMap((team) =>
@@ -53,6 +76,39 @@ export default function TeamsPage() {
 
       <div className="container mx-auto px-4 py-8">
         <h1 className="text-4xl font-bold text-gray-900 mb-8">Team Comparison</h1>
+
+        {/* Week Selection */}
+        {availableWeeks.length > 0 && (
+          <div className="bg-white rounded-lg shadow p-6 mb-8">
+            <h2 className="text-xl font-semibold text-gray-900 mb-4">Select Week (Optional)</h2>
+            <div className="flex gap-2 flex-wrap">
+              <button
+                onClick={() => setSelectedWeek(null)}
+                className={`px-4 py-2 rounded font-semibold transition-colors ${
+                  selectedWeek === null
+                    ? 'bg-blue-600 text-white'
+                    : 'bg-gray-200 text-gray-800 hover:bg-gray-300'
+                }`}
+              >
+                Season
+              </button>
+              {availableWeeks.map((week) => (
+                <button
+                  key={week}
+                  onClick={() => setSelectedWeek(week)}
+                  className={`px-4 py-2 rounded font-semibold transition-colors ${
+                    selectedWeek === week
+                      ? 'bg-blue-600 text-white'
+                      : 'bg-gray-200 text-gray-800 hover:bg-gray-300'
+                  }`}
+                >
+                  Week {week}
+                </button>
+              ))}
+            </div>
+            <p className="text-sm text-gray-600 mt-3">Weekly data available for KC, SF, DAL</p>
+          </div>
+        )}
 
         {/* Team Selection */}
         <div className="bg-white rounded-lg shadow p-6 mb-8">
