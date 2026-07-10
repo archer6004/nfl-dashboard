@@ -3,12 +3,12 @@ import Link from 'next/link';
 export default function Home() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
-      <div className="container mx-auto px-4 py-16">
+      <div className="container mx-auto px-4 py-8 md:py-16">
         <div className="max-w-2xl mx-auto">
-          <h1 className="text-5xl font-bold text-center text-gray-900 mb-4">
+          <h1 className="text-3xl md:text-5xl font-bold text-center text-gray-900 mb-4">
             NFL Fantasy Dashboard
           </h1>
-          <p className="text-xl text-center text-gray-600 mb-12">
+          <p className="text-lg md:text-xl text-center text-gray-600 mb-8 md:mb-12">
             Analyze NFL teams and player statistics for smarter fantasy football decisions
           </p>
 
@@ -56,9 +56,9 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="mt-16 text-center">
-            <p className="text-sm text-gray-500">
-              Using mock data for prototype • Real data integration coming soon
+          <div className="mt-12 md:mt-16 text-center">
+            <p className="text-xs md:text-sm text-gray-500">
+              All 32 NFL teams • Weekly statistics • Season data
             </p>
           </div>
         </div>

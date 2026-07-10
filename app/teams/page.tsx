@@ -74,8 +74,8 @@ export default function TeamsPage() {
         </div>
       </nav>
 
-      <div className="container mx-auto px-4 py-8">
-        <h1 className="text-4xl font-bold text-gray-900 mb-8">Team Comparison</h1>
+      <div className="container mx-auto px-4 py-6 md:py-8">
+        <h1 className="text-2xl md:text-4xl font-bold text-gray-900 mb-6 md:mb-8">Team Comparison</h1>
 
         {/* Week Selection */}
         {availableWeeks.length > 0 && (
