@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { getPlayers, getPlayerById } from '@/data/mock/players';
+import { getPlayers, getPlayerById } from '@/data';
 import { RadarChartCard } from '@/components/charts/RadarChartCard';
 
 export default function PlayerComparePage() {

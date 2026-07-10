@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { getTeams } from '@/data/mock/teams';
+import { getTeams } from '@/data';
 import { RadarChartCard } from '@/components/charts/RadarChartCard';
 import { BarChartCard } from '@/components/charts/BarChartCard';
 

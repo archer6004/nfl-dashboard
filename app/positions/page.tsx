@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { getPlayers } from '@/data/mock/players';
+import { getPlayers } from '@/data';
 
 type Position = 'QB' | 'RB' | 'WR' | 'TE';
 
