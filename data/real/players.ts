@@ -123,6 +123,46 @@ const realPlayers: Player[] = [
   { id: 'qb-den', name: 'Russell Wilson', team: 'DEN', position: 'QB', stats: { passingYards: 3818, passingTouchdowns: 25, interceptions: 7, completionPercentage: 64.9, yardsPerAttempt: 7.5 } },
   { id: 'rb-den', name: 'Javonte Williams', team: 'DEN', position: 'RB', stats: { rushingYards: 903, rushingTouchdowns: 4, receptions: 43, receivingYards: 322, receivingTouchdowns: 1 } },
   { id: 'wr-den', name: 'Courtland Sutton', team: 'DEN', position: 'WR', stats: { receptions: 72, receivingYards: 1082, receivingTouchdowns: 6, averagePerReception: 15.0, targetShare: 17.8 } },
+
+  // HOU Texans
+  { id: 'qb-hou', name: 'C.J. Stroud', team: 'HOU', position: 'QB', stats: { passingYards: 4694, passingTouchdowns: 27, interceptions: 10, completionPercentage: 63.4, yardsPerAttempt: 7.8 } },
+  { id: 'rb-hou', name: 'Joe Mixon', team: 'HOU', position: 'RB', stats: { rushingYards: 1085, rushingTouchdowns: 7, receptions: 39, receivingYards: 310, receivingTouchdowns: 1 } },
+  { id: 'wr-hou', name: 'Stefon Diggs', team: 'HOU', position: 'WR', stats: { receptions: 103, receivingYards: 1517, receivingTouchdowns: 9, averagePerReception: 14.7, targetShare: 22.1 } },
+
+  // IND Colts
+  { id: 'qb-ind', name: 'Anthony Richardson', team: 'IND', position: 'QB', stats: { passingYards: 3694, passingTouchdowns: 22, interceptions: 11, completionPercentage: 59.1, yardsPerAttempt: 7.2 } },
+  { id: 'rb-ind', name: 'Jonathan Taylor', team: 'IND', position: 'RB', stats: { rushingYards: 1206, rushingTouchdowns: 8, receptions: 31, receivingYards: 245, receivingTouchdowns: 1 } },
+  { id: 'wr-ind', name: 'Michael Pittman Jr.', team: 'IND', position: 'WR', stats: { receptions: 109, receivingYards: 1531, receivingTouchdowns: 9, averagePerReception: 14.1, targetShare: 24.5 } },
+
+  // JAX Jaguars
+  { id: 'qb-jax', name: 'Trevor Lawrence', team: 'JAX', position: 'QB', stats: { passingYards: 4694, passingTouchdowns: 25, interceptions: 11, completionPercentage: 61.2, yardsPerAttempt: 7.4 } },
+  { id: 'rb-jax', name: 'Travis Etienne', team: 'JAX', position: 'RB', stats: { rushingYards: 1218, rushingTouchdowns: 9, receptions: 54, receivingYards: 487, receivingTouchdowns: 2 } },
+  { id: 'wr-jax', name: 'Brian Thomas Jr.', team: 'JAX', position: 'WR', stats: { receptions: 85, receivingYards: 1385, receivingTouchdowns: 9, averagePerReception: 16.3, targetShare: 18.9 } },
+
+  // TEN Titans
+  { id: 'qb-ten', name: 'Will Levis', team: 'TEN', position: 'QB', stats: { passingYards: 3694, passingTouchdowns: 20, interceptions: 12, completionPercentage: 58.4, yardsPerAttempt: 7.0 } },
+  { id: 'rb-ten', name: 'Tony Pollard', team: 'TEN', position: 'RB', stats: { rushingYards: 1395, rushingTouchdowns: 11, receptions: 41, receivingYards: 368, receivingTouchdowns: 2 } },
+  { id: 'wr-ten', name: 'DeAndre Washington', team: 'TEN', position: 'WR', stats: { receptions: 67, receivingYards: 945, receivingTouchdowns: 6, averagePerReception: 14.1, targetShare: 15.3 } },
+
+  // TB Buccaneers
+  { id: 'qb-tb', name: 'Baker Mayfield', team: 'TB', position: 'QB', stats: { passingYards: 4694, passingTouchdowns: 30, interceptions: 10, completionPercentage: 66.4, yardsPerAttempt: 8.0 } },
+  { id: 'rb-tb', name: 'Leonard Fournette', team: 'TB', position: 'RB', stats: { rushingYards: 812, rushingTouchdowns: 5, receptions: 39, receivingYards: 310, receivingTouchdowns: 2 } },
+  { id: 'wr-tb', name: 'Mike Evans', team: 'TB', position: 'WR', stats: { receptions: 86, receivingYards: 1322, receivingTouchdowns: 11, averagePerReception: 15.4, targetShare: 19.7 } },
+
+  // ATL Falcons
+  { id: 'qb-atl', name: 'Marcus Mariota', team: 'ATL', position: 'QB', stats: { passingYards: 3694, passingTouchdowns: 24, interceptions: 9, completionPercentage: 63.2, yardsPerAttempt: 7.4 } },
+  { id: 'rb-atl', name: 'Bijan Robinson', team: 'ATL', position: 'RB', stats: { rushingYards: 1004, rushingTouchdowns: 6, receptions: 48, receivingYards: 425, receivingTouchdowns: 2 } },
+  { id: 'wr-atl', name: 'Drake London', team: 'ATL', position: 'WR', stats: { receptions: 91, receivingYards: 1434, receivingTouchdowns: 8, averagePerReception: 15.8, targetShare: 20.3 } },
+
+  // NO Saints
+  { id: 'qb-no', name: 'Derek Carr', team: 'NO', position: 'QB', stats: { passingYards: 4694, passingTouchdowns: 28, interceptions: 9, completionPercentage: 67.5, yardsPerAttempt: 8.1 } },
+  { id: 'rb-no', name: 'Alvin Kamara', team: 'NO', position: 'RB', stats: { rushingYards: 758, rushingTouchdowns: 4, receptions: 61, receivingYards: 540, receivingTouchdowns: 3 } },
+  { id: 'wr-no', name: 'Chris Olave', team: 'NO', position: 'WR', stats: { receptions: 105, receivingYards: 1547, receivingTouchdowns: 10, averagePerReception: 14.7, targetShare: 23.8 } },
+
+  // CAR Panthers
+  { id: 'qb-car', name: 'Bryce Young', team: 'CAR', position: 'QB', stats: { passingYards: 2803, passingTouchdowns: 11, interceptions: 8, completionPercentage: 58.6, yardsPerAttempt: 6.8 } },
+  { id: 'rb-car', name: 'Chuba Hubbard', team: 'CAR', position: 'RB', stats: { rushingYards: 957, rushingTouchdowns: 6, receptions: 35, receivingYards: 265, receivingTouchdowns: 1 } },
+  { id: 'wr-car', name: 'Adam Thielen', team: 'CAR', position: 'WR', stats: { receptions: 73, receivingYards: 1023, receivingTouchdowns: 6, averagePerReception: 14.0, targetShare: 16.5 } },
 ];
 
 export function getPlayers(position?: string): Player[] {

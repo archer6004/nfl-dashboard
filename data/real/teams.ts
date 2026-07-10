@@ -92,6 +92,51 @@ const realTeams: Team[] = [
       { down: '3rd', passPct: 73, rushPct: 27 },
     ],
   },
+  // AFC South
+  {
+    id: 'HOU',
+    name: 'Houston Texans',
+    offense: { passRate: 58, rushRate: 42, yardsPerGame: 360, pointsPerGame: 25.3, turnovers: 13 },
+    defense: { yardsAllowed: 340, pointsAllowed: 22.5, sacks: 33 },
+    downTendencies: [
+      { down: '1st', passPct: 53, rushPct: 47 },
+      { down: '2nd', passPct: 63, rushPct: 37 },
+      { down: '3rd', passPct: 71, rushPct: 29 },
+    ],
+  },
+  {
+    id: 'IND',
+    name: 'Indianapolis Colts',
+    offense: { passRate: 60, rushRate: 40, yardsPerGame: 355, pointsPerGame: 24.8, turnovers: 14 },
+    defense: { yardsAllowed: 345, pointsAllowed: 23.3, sacks: 32 },
+    downTendencies: [
+      { down: '1st', passPct: 55, rushPct: 45 },
+      { down: '2nd', passPct: 65, rushPct: 35 },
+      { down: '3rd', passPct: 72, rushPct: 28 },
+    ],
+  },
+  {
+    id: 'JAX',
+    name: 'Jacksonville Jaguars',
+    offense: { passRate: 59, rushRate: 41, yardsPerGame: 348, pointsPerGame: 23.5, turnovers: 16 },
+    defense: { yardsAllowed: 355, pointsAllowed: 24.2, sacks: 30 },
+    downTendencies: [
+      { down: '1st', passPct: 54, rushPct: 46 },
+      { down: '2nd', passPct: 64, rushPct: 36 },
+      { down: '3rd', passPct: 70, rushPct: 30 },
+    ],
+  },
+  {
+    id: 'TEN',
+    name: 'Tennessee Titans',
+    offense: { passRate: 52, rushRate: 48, yardsPerGame: 342, pointsPerGame: 22.1, turnovers: 17 },
+    defense: { yardsAllowed: 352, pointsAllowed: 23.9, sacks: 31 },
+    downTendencies: [
+      { down: '1st', passPct: 47, rushPct: 53 },
+      { down: '2nd', passPct: 57, rushPct: 43 },
+      { down: '3rd', passPct: 68, rushPct: 32 },
+    ],
+  },
   // AFC West
   {
     id: 'KC',
@@ -182,7 +227,7 @@ const realTeams: Team[] = [
       { down: '3rd', passPct: 70, rushPct: 30 },
     ],
   },
-  // NFC Central
+  // NFC North
   {
     id: 'GB',
     name: 'Green Bay Packers',
@@ -225,6 +270,51 @@ const realTeams: Team[] = [
       { down: '1st', passPct: 50, rushPct: 50 },
       { down: '2nd', passPct: 60, rushPct: 40 },
       { down: '3rd', passPct: 68, rushPct: 32 },
+    ],
+  },
+  // NFC South
+  {
+    id: 'TB',
+    name: 'Tampa Bay Buccaneers',
+    offense: { passRate: 63, rushRate: 37, yardsPerGame: 372, pointsPerGame: 27.1, turnovers: 12 },
+    defense: { yardsAllowed: 342, pointsAllowed: 23.4, sacks: 32 },
+    downTendencies: [
+      { down: '1st', passPct: 58, rushPct: 42 },
+      { down: '2nd', passPct: 68, rushPct: 32 },
+      { down: '3rd', passPct: 75, rushPct: 25 },
+    ],
+  },
+  {
+    id: 'ATL',
+    name: 'Atlanta Falcons',
+    offense: { passRate: 61, rushRate: 39, yardsPerGame: 365, pointsPerGame: 25.7, turnovers: 14 },
+    defense: { yardsAllowed: 350, pointsAllowed: 24.2, sacks: 30 },
+    downTendencies: [
+      { down: '1st', passPct: 56, rushPct: 44 },
+      { down: '2nd', passPct: 66, rushPct: 34 },
+      { down: '3rd', passPct: 72, rushPct: 28 },
+    ],
+  },
+  {
+    id: 'NO',
+    name: 'New Orleans Saints',
+    offense: { passRate: 59, rushRate: 41, yardsPerGame: 358, pointsPerGame: 24.2, turnovers: 15 },
+    defense: { yardsAllowed: 348, pointsAllowed: 23.8, sacks: 31 },
+    downTendencies: [
+      { down: '1st', passPct: 54, rushPct: 46 },
+      { down: '2nd', passPct: 64, rushPct: 36 },
+      { down: '3rd', passPct: 71, rushPct: 29 },
+    ],
+  },
+  {
+    id: 'CAR',
+    name: 'Carolina Panthers',
+    offense: { passRate: 57, rushRate: 43, yardsPerGame: 340, pointsPerGame: 21.5, turnovers: 17 },
+    defense: { yardsAllowed: 358, pointsAllowed: 24.6, sacks: 29 },
+    downTendencies: [
+      { down: '1st', passPct: 52, rushPct: 48 },
+      { down: '2nd', passPct: 62, rushPct: 38 },
+      { down: '3rd', passPct: 70, rushPct: 30 },
     ],
   },
   // NFC West
