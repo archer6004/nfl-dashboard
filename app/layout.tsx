@@ -27,7 +27,35 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-row bg-gray-50">
+        {/* Sidebar */}
+        <div className="w-64 bg-gray-900 text-white flex flex-col min-h-screen p-6 shadow-lg">
+          <h1 className="text-2xl font-bold mb-8 text-center">NFL Dashboard</h1>
+          <nav className="space-y-4 flex-1">
+            <a href="/" className="block px-4 py-3 rounded-lg hover:bg-gray-800 transition-colors text-base font-medium">
+              🏠 Home
+            </a>
+            <a href="/teams" className="block px-4 py-3 rounded-lg hover:bg-gray-800 transition-colors text-base font-medium">
+              🏈 Teams
+            </a>
+            <a href="/positions" className="block px-4 py-3 rounded-lg hover:bg-gray-800 transition-colors text-base font-medium">
+              👥 Positions
+            </a>
+            <a href="/players/compare" className="block px-4 py-3 rounded-lg hover:bg-gray-800 transition-colors text-base font-medium">
+              ⚖️ Compare
+            </a>
+          </nav>
+          <div className="text-xs text-gray-400 border-t border-gray-700 pt-4">
+            <p>v1.0</p>
+            <p>All 32 NFL Teams</p>
+          </div>
+        </div>
+
+        {/* Main Content */}
+        <div className="flex-1 overflow-auto">
+          {children}
+        </div>
+      </body>
     </html>
   );
 }
