@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
@@ -32,18 +33,18 @@ export default function RootLayout({
         <div className="w-64 bg-gray-900 text-white flex flex-col min-h-screen p-6 shadow-lg">
           <h1 className="text-2xl font-bold mb-8 text-center">NFL Dashboard</h1>
           <nav className="space-y-4 flex-1">
-            <a href="/" className="block px-4 py-3 rounded-lg hover:bg-gray-800 transition-colors text-base font-medium">
+            <Link href="/" className="block px-4 py-3 rounded-lg hover:bg-gray-800 transition-colors text-base font-medium">
               🏠 Home
-            </a>
-            <a href="/teams" className="block px-4 py-3 rounded-lg hover:bg-gray-800 transition-colors text-base font-medium">
+            </Link>
+            <Link href="/teams" className="block px-4 py-3 rounded-lg hover:bg-gray-800 transition-colors text-base font-medium">
               🏈 Teams
-            </a>
-            <a href="/positions" className="block px-4 py-3 rounded-lg hover:bg-gray-800 transition-colors text-base font-medium">
+            </Link>
+            <Link href="/positions" className="block px-4 py-3 rounded-lg hover:bg-gray-800 transition-colors text-base font-medium">
               👥 Positions
-            </a>
-            <a href="/players/compare" className="block px-4 py-3 rounded-lg hover:bg-gray-800 transition-colors text-base font-medium">
+            </Link>
+            <Link href="/players/compare" className="block px-4 py-3 rounded-lg hover:bg-gray-800 transition-colors text-base font-medium">
               ⚖️ Compare
-            </a>
+            </Link>
           </nav>
           <div className="text-xs text-gray-400 border-t border-gray-700 pt-4">
             <p>v1.0</p>
